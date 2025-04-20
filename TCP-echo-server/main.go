@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net"
 	"time"
+	"io"
 )
 
 func main() {
@@ -40,12 +41,17 @@ func handleConnection(conn net.Conn) {
 	for {
 		n, err := conn.Read(buf)
 		if err != nil {
+			//handle client disconnection gracefully
+			if err == io.EOF {
 			fmt.Printf("[%s] Disconnected: %s\n", time.Now().Format(time.RFC3339), clientAddr) //log disconnection in UTC
+		}else{
+			fmt.Printf("[%s] Error reading from %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
+		}
 			return
 		}
 		_, err = conn.Write(buf[:n])
 		if err != nil {
-			fmt.Println("error writing to client:", err)
+			fmt.Printf("[%s] Error writing to %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
 		}
 	}
 }
