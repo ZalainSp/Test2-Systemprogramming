@@ -5,6 +5,7 @@ package main
 import (
 	"fmt"
 	"net"
+	"time"
 )
 
 func main() {
@@ -30,12 +31,16 @@ func main() {
 }
 func handleConnection(conn net.Conn) {
 	defer conn.Close()
+
+	clientAddr := conn.RemoteAddr().String() //get client IP
+	fmt.Printf("[%s] Connected: %s\n", time.Now().Format(time.RFC3339), clientAddr) //log address and timestamp in UTC
+
 	buf := make([]byte, 1024)
 
 	for {
 		n, err := conn.Read(buf)
 		if err != nil {
-			fmt.Println("Error reading from client:", err)
+			fmt.Printf("[%s] Disconnected: %s\n", time.Now().Format(time.RFC3339), clientAddr) //log disconnection in UTC
 			return
 		}
 		_, err = conn.Write(buf[:n])
