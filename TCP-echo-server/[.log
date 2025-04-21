@@ -1,0 +1,137 @@
+[2025-04-21T00:14:53Z] GET / HTTP/1.1
+[2025-04-21T00:14:53Z] Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[2025-04-21T00:14:53Z] Host: localhost:4000
+[2025-04-21T00:14:53Z] User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-04-21T00:14:53Z] Accept-Encoding: gzip, deflate, br, zstd
+[2025-04-21T00:14:53Z] Accept-Language: en-US,en;q=0.9
+[2025-04-21T00:14:53Z] Referer: https://literate-journey-5gqpp7rqrpr4hr4g.github.dev/
+[2025-04-21T00:14:53Z] X-Request-ID: ff3fc916d644f16cfcb0cb9139bcbd30
+[2025-04-21T00:14:53Z] X-Real-IP: 138.185.76.130
+[2025-04-21T00:14:53Z] X-Forwarded-Port: 443
+[2025-04-21T00:14:53Z] X-Forwarded-Scheme: https
+[2025-04-21T00:14:53Z] X-Original-URI: /
+[2025-04-21T00:14:53Z] X-Scheme: https
+[2025-04-21T00:14:53Z] sec-ch-ua: "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-04-21T00:14:53Z] sec-ch-ua-mobile: ?0
+[2025-04-21T00:14:53Z] sec-ch-ua-platform: "Windows"
+[2025-04-21T00:14:53Z] sec-fetch-site: same-site
+[2025-04-21T00:14:53Z] sec-fetch-mode: navigate
+[2025-04-21T00:14:53Z] sec-fetch-user: ?1
+[2025-04-21T00:14:53Z] sec-fetch-dest: document
+[2025-04-21T00:14:53Z] priority: u=0, i
+[2025-04-21T00:14:53Z] X-Original-Proto: https
+[2025-04-21T00:14:53Z] X-Forwarded-Proto: https
+[2025-04-21T00:14:53Z] X-Forwarded-Host: literate-journey-5gqpp7rqrpr4hr4g-4000.app.github.dev
+[2025-04-21T00:14:53Z] X-Forwarded-For: 138.185.76.130
+[2025-04-21T00:14:53Z] Proxy-Connection: Keep-Alive
+[2025-04-21T00:14:53Z] 
+[2025-04-21T00:15:04Z] GET / HTTP/1.1
+[2025-04-21T00:15:04Z] Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[2025-04-21T00:15:04Z] Host: localhost:4000
+[2025-04-21T00:15:04Z] User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-04-21T00:15:04Z] Accept-Encoding: gzip, deflate, br, zstd
+[2025-04-21T00:15:04Z] Accept-Language: en-US,en;q=0.9
+[2025-04-21T00:15:04Z] Cache-Control: max-age=0
+[2025-04-21T00:15:04Z] Referer: https://literate-journey-5gqpp7rqrpr4hr4g.github.dev/
+[2025-04-21T00:15:04Z] X-Request-ID: 18f8b754af7f9e8ea5c72f599a5e558a
+[2025-04-21T00:15:04Z] X-Real-IP: 138.185.76.130
+[2025-04-21T00:15:04Z] X-Forwarded-Port: 443
+[2025-04-21T00:15:04Z] X-Forwarded-Scheme: https
+[2025-04-21T00:15:04Z] X-Original-URI: /
+[2025-04-21T00:15:04Z] X-Scheme: https
+[2025-04-21T00:15:04Z] sec-ch-ua: "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-04-21T00:15:04Z] sec-ch-ua-mobile: ?0
+[2025-04-21T00:15:04Z] sec-ch-ua-platform: "Windows"
+[2025-04-21T00:15:04Z] sec-fetch-site: cross-site
+[2025-04-21T00:15:04Z] sec-fetch-mode: navigate
+[2025-04-21T00:15:04Z] sec-fetch-user: ?1
+[2025-04-21T00:15:04Z] sec-fetch-dest: document
+[2025-04-21T00:15:04Z] priority: u=0, i
+[2025-04-21T00:15:04Z] X-Original-Proto: https
+[2025-04-21T00:15:04Z] X-Forwarded-Proto: https
+[2025-04-21T00:15:04Z] X-Forwarded-Host: literate-journey-5gqpp7rqrpr4hr4g-4000.app.github.dev
+[2025-04-21T00:15:04Z] X-Forwarded-For: 138.185.76.130
+[2025-04-21T00:15:04Z] Proxy-Connection: Keep-Alive
+[2025-04-21T00:15:04Z] 
+[2025-04-21T00:15:12Z] GET / HTTP/1.1
+[2025-04-21T00:15:12Z] Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[2025-04-21T00:15:12Z] Host: localhost:4000
+[2025-04-21T00:15:12Z] User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-04-21T00:15:12Z] Accept-Encoding: gzip, deflate, br, zstd
+[2025-04-21T00:15:12Z] Accept-Language: en-US,en;q=0.9
+[2025-04-21T00:15:12Z] Cache-Control: max-age=0
+[2025-04-21T00:15:12Z] Referer: https://literate-journey-5gqpp7rqrpr4hr4g.github.dev/
+[2025-04-21T00:15:12Z] X-Request-ID: e9353d25818201ca7c3def89461af47b
+[2025-04-21T00:15:12Z] X-Real-IP: 138.185.76.130
+[2025-04-21T00:15:12Z] X-Forwarded-Port: 443
+[2025-04-21T00:15:12Z] X-Forwarded-Scheme: https
+[2025-04-21T00:15:12Z] X-Original-URI: /
+[2025-04-21T00:15:12Z] X-Scheme: https
+[2025-04-21T00:15:12Z] sec-ch-ua: "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-04-21T00:15:12Z] sec-ch-ua-mobile: ?0
+[2025-04-21T00:15:12Z] sec-ch-ua-platform: "Windows"
+[2025-04-21T00:15:12Z] sec-fetch-site: cross-site
+[2025-04-21T00:15:12Z] sec-fetch-mode: navigate
+[2025-04-21T00:15:12Z] sec-fetch-user: ?1
+[2025-04-21T00:15:12Z] sec-fetch-dest: document
+[2025-04-21T00:15:12Z] priority: u=0, i
+[2025-04-21T00:15:12Z] X-Original-Proto: https
+[2025-04-21T00:15:12Z] X-Forwarded-Proto: https
+[2025-04-21T00:15:12Z] X-Forwarded-Host: literate-journey-5gqpp7rqrpr4hr4g-4000.app.github.dev
+[2025-04-21T00:15:12Z] X-Forwarded-For: 138.185.76.130
+[2025-04-21T00:15:12Z] Proxy-Connection: Keep-Alive
+[2025-04-21T00:15:12Z] 
+[2025-04-21T00:20:58Z] GET / HTTP/1.1
+[2025-04-21T00:20:58Z] Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[2025-04-21T00:20:58Z] Host: localhost:4000
+[2025-04-21T00:20:58Z] User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-04-21T00:20:58Z] Accept-Encoding: gzip, deflate, br, zstd
+[2025-04-21T00:20:58Z] Accept-Language: en-US,en;q=0.9
+[2025-04-21T00:20:58Z] Referer: https://literate-journey-5gqpp7rqrpr4hr4g.github.dev/
+[2025-04-21T00:20:58Z] X-Request-ID: 52973e37b2f4826bf0aef6e4922b92de
+[2025-04-21T00:20:58Z] X-Real-IP: 138.185.76.130
+[2025-04-21T00:20:58Z] X-Forwarded-Port: 443
+[2025-04-21T00:20:58Z] X-Forwarded-Scheme: https
+[2025-04-21T00:20:58Z] X-Original-URI: /
+[2025-04-21T00:20:58Z] X-Scheme: https
+[2025-04-21T00:20:58Z] sec-ch-ua: "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-04-21T00:20:58Z] sec-ch-ua-mobile: ?0
+[2025-04-21T00:20:58Z] sec-ch-ua-platform: "Windows"
+[2025-04-21T00:20:58Z] sec-fetch-site: same-site
+[2025-04-21T00:20:58Z] sec-fetch-mode: navigate
+[2025-04-21T00:20:58Z] sec-fetch-user: ?1
+[2025-04-21T00:20:58Z] sec-fetch-dest: document
+[2025-04-21T00:20:58Z] priority: u=0, i
+[2025-04-21T00:20:58Z] X-Original-Proto: https
+[2025-04-21T00:20:58Z] X-Forwarded-Proto: https
+[2025-04-21T00:20:58Z] X-Forwarded-Host: literate-journey-5gqpp7rqrpr4hr4g-4000.app.github.dev
+[2025-04-21T00:20:58Z] X-Forwarded-For: 138.185.76.130
+[2025-04-21T00:20:58Z] Proxy-Connection: Keep-Alive
+[2025-04-21T00:20:58Z] 
+[2025-04-21T00:25:54Z] GET / HTTP/1.1
+[2025-04-21T00:25:54Z] Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+[2025-04-21T00:25:54Z] Host: localhost:4000
+[2025-04-21T00:25:54Z] User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+[2025-04-21T00:25:54Z] Accept-Encoding: gzip, deflate, br, zstd
+[2025-04-21T00:25:54Z] Accept-Language: en-US,en;q=0.9
+[2025-04-21T00:25:54Z] Referer: https://literate-journey-5gqpp7rqrpr4hr4g.github.dev/
+[2025-04-21T00:25:54Z] X-Request-ID: c86c2baca5f7901b950ef16ccb70b8d1
+[2025-04-21T00:25:54Z] X-Real-IP: 138.185.76.130
+[2025-04-21T00:25:54Z] X-Forwarded-Port: 443
+[2025-04-21T00:25:54Z] X-Forwarded-Scheme: https
+[2025-04-21T00:25:54Z] X-Original-URI: /
+[2025-04-21T00:25:54Z] X-Scheme: https
+[2025-04-21T00:25:54Z] sec-ch-ua: "Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"
+[2025-04-21T00:25:54Z] sec-ch-ua-mobile: ?0
+[2025-04-21T00:25:54Z] sec-ch-ua-platform: "Windows"
+[2025-04-21T00:25:54Z] sec-fetch-site: same-site
+[2025-04-21T00:25:54Z] sec-fetch-mode: navigate
+[2025-04-21T00:25:54Z] sec-fetch-user: ?1
+[2025-04-21T00:25:54Z] sec-fetch-dest: document
+[2025-04-21T00:25:54Z] priority: u=0, i
+[2025-04-21T00:25:54Z] X-Original-Proto: https
+[2025-04-21T00:25:54Z] X-Forwarded-Proto: https
+[2025-04-21T00:25:54Z] X-Forwarded-Host: literate-journey-5gqpp7rqrpr4hr4g-4000.app.github.dev
+[2025-04-21T00:25:54Z] X-Forwarded-For: 138.185.76.130
+[2025-04-21T00:25:54Z] Proxy-Connection: Keep-Alive
+[2025-04-21T00:25:54Z] 
