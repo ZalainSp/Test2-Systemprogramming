@@ -58,6 +58,16 @@ func handleConnection(conn net.Conn) {
 
 	reader := bufio.NewReader(conn) //buffered reader to read lines
 
+	//create inavtivity timer for 30 seconds
+	inactivityTimer := time.NewTimer(30 * time.Second)
+
+	//goroutine to handle the timeout
+	go func(){
+		<-inactivityTimer.C
+		fmt.Printf("[%s] Inactivity timeout, disconnecting %s\n", time.Now().Format(time.RFC3339), clientAddr)
+		conn.Close()
+	}()
+
 	for {
 		line, err := reader.ReadString('\n') //read until new line
 		if err != nil {
@@ -69,6 +79,12 @@ func handleConnection(conn net.Conn) {
 		}
 			return
 		}
+
+		//resets the timer when there is activity
+		if !inactivityTimer.Stop() {
+			<-inactivityTimer.C
+		}
+		inactivityTimer.Reset(30 * time.Second)
 
 		clean := strings.TrimSpace(line) //trim whitespace
 
