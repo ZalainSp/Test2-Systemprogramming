@@ -25,7 +25,7 @@ func main() {
 	}
 	defer listener.Close()
 
-	fmt.Println("server listening on :4000")
+	fmt.Printf("server listening on %s\n", address)
 	// our program runs an infinite loop
 	for {
 		conn, err := listener.Accept()
