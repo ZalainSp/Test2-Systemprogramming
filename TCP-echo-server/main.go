@@ -91,25 +91,40 @@ func handleConnection(conn net.Conn) {
 
 		clean := strings.TrimSpace(line) //trim whitespace
 
-		// Check message length 
-		if len(clean) > maxMessageLength {
-			clean = clean[:maxMessageLength] // Truncate the message
-			_, err := conn.Write([]byte("Message too long and was truncated.\n"))
-			if err != nil {
-				fmt.Printf("[%s] Error writing to %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
-				return
+		//hand the server presonality mode responses
+		var response string
+		switch clean {
+		case "hello":
+			response = "Hi there!"
+		case "bye":
+			response = "Goodbye!"
+			conn.Write([]byte(response + "\n"))
+			fmt.Printf("[%s] Disconnected: %s\n", time.Now().Format(time.RFC3339), clientAddr) // log disconnection
+			return
+		case "":
+			response = "Say something..."
+		default:
+			// Check message length
+			if len(clean) > maxMessageLength {
+				clean = clean[:maxMessageLength] // Truncate the message
+				_, err := conn.Write([]byte("Message too long and was truncated.\n"))
+				if err != nil {
+					fmt.Printf("[%s] Error writing to %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
+					return
+				}
 			}
+			response = clean
 		}
 
-		//log message to the file
-		logEntry := fmt.Sprintf("[%s] %s\n", time.Now().Format(time.RFC3339),clean)
+	// log message to the file
+		logEntry := fmt.Sprintf("[%s] %s\n", time.Now().Format(time.RFC3339), clean)
 		_, err = logFile.WriteString(logEntry)
 		if err != nil {
 			fmt.Printf("[%s] Error writing to log file for %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
 		}
 
-
-		_, err = conn.Write([]byte(clean + "\n")) // echo clean line
+		// echo the response back to the client
+		_, err = conn.Write([]byte(response + "\n"))
 		if err != nil {
 			fmt.Printf("[%s] Error writing to %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
 			return
