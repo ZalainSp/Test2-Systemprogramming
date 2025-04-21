@@ -10,17 +10,22 @@ import (
 	"bufio" //for buffered line reading
 	"strings" //to trim whitespace
 	"os" //for file writing
+	"flag" //for commandline flags
 )
 
 func main() {
+	//commandline flag for port configuration
+	port := flag.String("port", "4000", "Port to listen on")
+	flag.Parse()
 	//define the target  host and port we want to connect to
-	listener, err := net.Listen("tcp", ":4000")
+	address := ":" + *port
+	listener, err := net.Listen("tcp", address)
 	if err != nil {
 		panic(err)
 	}
 	defer listener.Close()
 
-	fmt.Println("server listeing on :4000")
+	fmt.Println("server listening on :4000")
 	// our program runs an infinite loop
 	for {
 		conn, err := listener.Accept()
