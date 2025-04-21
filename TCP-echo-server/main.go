@@ -7,6 +7,8 @@ import (
 	"net"
 	"time"
 	"io"
+	"bufio" //for buffered line reading
+	"strings" //to trim whitespace
 )
 
 func main() {
@@ -36,10 +38,10 @@ func handleConnection(conn net.Conn) {
 	clientAddr := conn.RemoteAddr().String() //get client IP
 	fmt.Printf("[%s] Connected: %s\n", time.Now().Format(time.RFC3339), clientAddr) //log address and timestamp in UTC
 
-	buf := make([]byte, 1024)
+	reader := bufio.NewReader(conn) //buffered reader to read lines
 
 	for {
-		n, err := conn.Read(buf)
+		line, err := reader.ReadString('\n') //read until new line
 		if err != nil {
 			//handle client disconnection gracefully
 			if err == io.EOF {
@@ -49,7 +51,8 @@ func handleConnection(conn net.Conn) {
 		}
 			return
 		}
-		_, err = conn.Write(buf[:n])
+		clean := strings.TrimSpace(line) //trim whitespace
+		_, err = conn.Write([]byte(clean + "\n")) // echo clean line
 		if err != nil {
 			fmt.Printf("[%s] Error writing to %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
 		}
