@@ -93,37 +93,50 @@ func handleConnection(conn net.Conn) {
 
 		//hand the server presonality mode responses
 		var response string
-		switch clean {
-		case "hello":
-			response = "Hi there!"
-		case "bye":
+		switch {
+		case clean == "/time":
+			//respond with the current server time
+			response = time.Now().Format(time.RFC3339)
+		case clean == "/quit":
+			//close the connection
 			response = "Goodbye!"
 			conn.Write([]byte(response + "\n"))
 			fmt.Printf("[%s] Disconnected: %s\n", time.Now().Format(time.RFC3339), clientAddr) // log disconnection
 			return
-		case "":
+		case strings.HasPrefix(clean, "/echo "):
+			//echo the message after the /echo command
+			response = clean[6:] //remove the /echo  part
+		case clean == "hello":
+			response = "Hi there!"
+		case clean == "bye":
+			response = "Goodbye!"
+			conn.Write([]byte(response + "\n"))
+			fmt.Printf("[%s] Disconnected: %s\n", time.Now().Format(time.RFC3339), clientAddr) // log disconnection
+			return
+		case clean == "":
 			response = "Say something..."
 		default:
-			// Check message length
+			//check message length and truncate
 			if len(clean) > maxMessageLength {
-				clean = clean[:maxMessageLength] // Truncate the message
+				clean = clean[:maxMessageLength] //truncate the message
 				_, err := conn.Write([]byte("Message too long and was truncated.\n"))
 				if err != nil {
 					fmt.Printf("[%s] Error writing to %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
 					return
 				}
 			}
+			//the response should reflect the truncated message
 			response = clean
 		}
 
-	// log message to the file
+	//log message to the file
 		logEntry := fmt.Sprintf("[%s] %s\n", time.Now().Format(time.RFC3339), clean)
 		_, err = logFile.WriteString(logEntry)
 		if err != nil {
 			fmt.Printf("[%s] Error writing to log file for %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
 		}
 
-		// echo the response back to the client
+		///echo the response back to the client
 		_, err = conn.Write([]byte(response + "\n"))
 		if err != nil {
 			fmt.Printf("[%s] Error writing to %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
