@@ -13,10 +13,13 @@ import (
 	"flag" //for commandline flags
 )
 
+const maxMessageLength = 1024; //max messages (length in bytes)
+
 func main() {
 	//commandline flag for port configuration
 	port := flag.String("port", "4000", "Port to listen on")
 	flag.Parse()
+
 	//define the target  host and port we want to connect to
 	address := ":" + *port
 	listener, err := net.Listen("tcp", address)
@@ -87,6 +90,16 @@ func handleConnection(conn net.Conn) {
 		inactivityTimer.Reset(30 * time.Second)
 
 		clean := strings.TrimSpace(line) //trim whitespace
+
+		// Check message length 
+		if len(clean) > maxMessageLength {
+			clean = clean[:maxMessageLength] // Truncate the message
+			_, err := conn.Write([]byte("Message too long and was truncated.\n"))
+			if err != nil {
+				fmt.Printf("[%s] Error writing to %s: %v\n", time.Now().Format(time.RFC3339), clientAddr, err)
+				return
+			}
+		}
 
 		//log message to the file
 		logEntry := fmt.Sprintf("[%s] %s\n", time.Now().Format(time.RFC3339),clean)
